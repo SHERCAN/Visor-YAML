@@ -1,0 +1,26 @@
+api:
+  client:
+    config:
+      baudrate: 12
+      port: COM4
+    type: serial
+  pull_time: 1
+  slaves:
+  - coils: ''
+    discrete: ''
+    id: 1
+    input: ''
+    registers:
+      holding:
+      - address: 12
+        count: 12
+        dest_address: 1
+      - address: 2
+        allow_write: true
+        count: 1
+        dest_address: 2
+  type: modbus
+modbus:
+- host: 0.0.0.0
+  port: '5520'
+  type: TCP

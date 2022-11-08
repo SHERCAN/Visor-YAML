@@ -1,0 +1,13 @@
+api:
+  client:
+    config:
+      baudrate:
+      - '12'
+      port:
+      - '12'
+    type: serial
+  type: modbus
+modbus:
+  host: 0.0.0.0
+  port: '90'
+  type: TCP

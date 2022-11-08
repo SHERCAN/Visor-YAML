@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Adamina" />
+  <link href="{{ url_for('static', path='/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <script src="{{ url_for('js', path='/js/jquery.min.js') }}"></script>
+  <link id="favicon" rel="icon" type="image/x-icon"
+    href="https://eneriongroup.com/wp-content/uploads/2020/10/cropped-Logo-Enerion-GROUP-1-3-32x32.png">
+  <title>View YAML</title>
+</head>
+
+<body>
+  <div id="fondo">
+    <div class="first tittle">
+      <h1>Configuration YAML</h1>
+    </div>
+    <div class="tittle first">
+      <h3>Registers</h3>
+    </div>
+    <div class="grilla">
+      {% for i in data %}
+      <div class="bordes">
+        <h6>{{i['name']}}</h6>
+        <div>
+          <div>
+            <label class="mb-2" for="addressConfig">Register</label>
+            <input class="inputs" id="addressConfig" name="addressConfig" type="number" value="{{i['register']}}"
+              disabled />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="mb-2" for="countConfig">Count</label>
+            <input class="inputs" id="countConfig" name="countConfig" type="number" value="{{i['count']}}" disabled />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="mb-2" for="destinAddressConfig">Scale</label>
+            <input class="inputs" id="destinAddressConfig" name="destinAddressConfig" type="number"
+              value="{{i['scale']}}" disabled />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="mb-2" for="allowWriteConfig">Allow Write</label>
+            <input class="inputs" id="allowWriteConfig" name="allowWriteConfig" type="text" value="{{i['write']}}"
+              disabled />
+          </div>
+          {% if i['write'] == True %}
+          <div>
+            <div>
+              <label class="mb-2" for="writeType">Write type</label>
+              <input class="inputs" id="writeType" name="writeType" type="text" value="{{i['write_type']}}" disabled />
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <label class="mb-2" for="writeRange">Write range</label>
+              </div>
+              <label class="mb-2" for="writeRange">Min</label>
+              <input class="inputs" id="writeRange" name="writeRange" type="number" value="{{i['write_range'][0]}}"
+                disabled />
+              <label class="mb-2" for="writeRange">Max</label>
+              <input class="inputs" id="writeRange" name="writeRange" type="number" value="{{i['write_range'][1]}}"
+                disabled />
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+
+</html>
