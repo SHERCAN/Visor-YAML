@@ -17,14 +17,15 @@
 <body>
   <div id="fondo">
     <div class="first tittle">
-      <h1>Configuration YAML</h1>
+      <h1>Configuration YAML view</h1>
     </div>
     <div class="tittle first">
       <h3>Registers</h3>
     </div>
     <div class="grilla">
       {% for i in data %}
-      <div class="bordes">
+      <div class="bordes" {% if i['register']==None or i['count']==None or i['scale']==None or i['unit']==None or
+        i['write']==None %} style="background-color: rgb(255, 0, 0);" {% endif %}>
         <h6>{{i['name']}}</h6>
         <div>
           <div>
@@ -44,6 +45,13 @@
             <label class="mb-2" for="destinAddressConfig">Scale</label>
             <input class="inputs" id="destinAddressConfig" name="destinAddressConfig" type="number"
               value="{{i['scale']}}" disabled />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="mb-2" for="destinAddressConfig">Unit</label>
+            <input class="inputs" id="destinAddressConfig" name="destinAddressConfig" type="text" value="{{i['unit']}}"
+              disabled />
           </div>
         </div>
         <div>

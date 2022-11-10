@@ -25,6 +25,5 @@ class ModelSettings(BaseModel):
 async def main(request: Request):
     with open('settings_clinet.yml', 'r') as file:
         prime_service = safe_load(file)
-    print(prime_service['data'][-1])
     context = {'request': request, 'data': prime_service['data']}
     return templates.TemplateResponse('index.html', context=context)

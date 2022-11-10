@@ -4,10 +4,10 @@ api2modbus:
 server:
   host: 10.0.4.39
   port: 5521
-  
+
 data:
   - slave: 1
-    register: 31
+    register:
     count: 1
     name: Grid side voltage L1-N
     scale: 0.1
@@ -77,7 +77,7 @@ data:
     unit: Amps
     write: False
   - slave: 1
-    register: 
+    register:
     count: 1
     name: Grid side current L2
     scale: 0.01
@@ -242,7 +242,7 @@ data:
     count: 1
     name: Battery Capacity SOC %
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 60
@@ -291,14 +291,14 @@ data:
     count: 1
     name: Grid side relay status
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 94
     count: 1
     name: Generator side relay status
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 67
@@ -312,7 +312,7 @@ data:
     count: 1
     name: Control Mode
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 96
@@ -396,21 +396,21 @@ data:
     count: 1
     name: Register without name
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 108
     count: 1
     name: Battery operates according to voltage or SOC
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 109
     count: 1
     name: Lithium battery wake up sign bit Activate Batt
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 110
@@ -424,28 +424,28 @@ data:
     count: 1
     name: Battery charging efficiency
     scale: 0.1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 112
     count: 1
     name: Battery capacity Shut Down
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 113
     count: 1
     name: Battery capacity Restart
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 114
     count: 1
     name: Battery capacity Low Batt
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 115
@@ -494,7 +494,7 @@ data:
     count: 1
     name: Generator charging starting capacity point
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 122
@@ -515,7 +515,7 @@ data:
     count: 1
     name: Grid charging start capacity point
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 125
@@ -529,35 +529,35 @@ data:
     count: 1
     name: Generator charging enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 127
     count: 1
     name: Grid charging enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 128
     count: 1
     name: Solar Input as PSU
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 129
     count: 1
     name: Force Smart load ON
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 130
     count: 1
     name: Generator input is enabled as Smart load output
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 131
@@ -571,7 +571,7 @@ data:
     count: 1
     name: Smart Load OFF batt
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 133
@@ -585,14 +585,14 @@ data:
     count: 1
     name: Smart Load ON batt
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 135
     count: 1
     name: Register withot name
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 136
@@ -606,7 +606,7 @@ data:
     count: 1
     name: Gen Grid Signal On
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 138
@@ -620,7 +620,7 @@ data:
     count: 1
     name: Register without name
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 140
@@ -669,42 +669,42 @@ data:
     count: 1
     name: External CT sensor directional detection
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 148
     count: 1
     name: Restore connection time
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 149
     count: 1
     name: Solar Arc Fault Mode turned on
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 150
     count: 1
     name: Grid Mode
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 151
     count: 1
     name: Grid Frequency Setting
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 152
     count: 1
     name: Grid Type
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 153
@@ -739,21 +739,21 @@ data:
     count: 1
     name: Generator connected to GRID input
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 158
     count: 1
     name: GEN peak shaving Power
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 160
     count: 1
     name: Parallel register 1
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 2
@@ -767,14 +767,14 @@ data:
     count: 1
     name: Work Mode
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 3
     count: 1
     name: Solar Sell
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 5
@@ -865,101 +865,101 @@ data:
     count: 1
     name: Point 1 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 11
     count: 1
     name: Point 2 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 15
     count: 1
     name: Point 3 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 19
     count: 1
     name: Point 4 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 23
     count: 1
     name: Point 5 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 27
     count: 1
     name: Point 6 capacity
     scale: 1
-    unit: '%'
+    unit: "%"
     write: False
   - slave: 1
     register: 8
     count: 1
     name: Time point 1 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 12
     count: 1
     name: Time point 2 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 16
     count: 1
     name: Time point 3 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 20
     count: 1
     name: Time point 4 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 24
     count: 1
     name: Time point 5 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 28
     count: 1
     name: Time point 6 charge enable
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 29
     count: 1
     name: Energy Pattern
     scale: 1
-    unit: 
+    unit:
     write: False
   - slave: 1
     register: 146
     count: 1
     name: AC Coupled export to grid cutoff
     scale: 1
-    unit: 
+    unit:
     write: True
     write_type: int
-    write_range: 
+    write_range:
       - 0
       - 1
   - slave: 1
@@ -967,10 +967,10 @@ data:
     count: 1
     name: Grid Connect/Disconnect
     scale: 1
-    unit: 
+    unit:
     write: True
     write_type: int
-    write_range: 
+    write_range:
       - 0
       - 1
   - slave: 1
@@ -978,9 +978,9 @@ data:
     count: 1
     name: Grid charging start capacity point
     scale: 1
-    unit: 
+    unit:
     write: True
     write_type: int
-    write_range: 
+    write_range:
       - 0
       - 255
